@@ -1,0 +1,37 @@
+class DotsIndicator extends StatelessWidget {
+  final int dotsCount;
+  final int position;
+
+  DotsIndicator({
+    this.dotsCount,
+    this.position,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: List.generate(
+        dotsCount,
+        (index) => Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4.0),
+          child: Container(
+            width: 8.0,
+            height: 8.0,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: index == position ? Colors.white : Colors.grey,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+This code will create a full-screen image slider with dot indicators at the bottom of the screen. The dots will change color to indicate the current page.
+
+You can customize the appearance of the slider and dot indicators by modifying the various properties and styling options available in the PageView, Positioned, and DotsIndicator widgets.
+
+
+
+
